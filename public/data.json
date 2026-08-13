@@ -1,0 +1,216 @@
+{
+  "visual": {
+    "navbar": {
+      "links": [
+        {
+          "label": "Experience",
+          "path": "#experience"
+        },
+        {
+          "label": "Projects",
+          "path": "#projects"
+        },
+        {
+          "label": "Education",
+          "path": "#education"
+        },
+        {
+          "label": "Blogs",
+          "path": "#blogs"
+        }
+      ]
+    },
+    "home": {
+      "sections": {
+        "banner": true,
+        "experience": true,
+        "project": true,
+        "education": true,
+        "testimonial": false
+      }
+    }
+  },
+  "personalInfo": {
+    "name": "Gnanasekaran Janushikha",
+    "title": "Full-Stack Developer | Cloud & AI Enthusiast",
+    "location": "Badulla, Sri Lanka",
+    "bio": "Third-year Computer Science and Engineering undergraduate at the University of Moratuwa with a strong interest in generative AI, cloud technologies, and full-stack development. Comfortable working across the stack, from cloud infrastructure to interactive front ends, and quick to pick up new tools and frameworks. Looking for an internship where I can apply my skills to real-world, impactful software projects while continuing to grow as an engineer."
+  },
+  "contactInfo": {
+    "email": "janug0227@gmail.com",
+    "phone": "0763050322",
+    "linkedin": "#!",
+    "github": "#!",
+    "twitter": "#!",
+    "website": "#!"
+  },
+  "skills": {
+    "languages": [
+      "Python",
+      "Java",
+      "JavaScript",
+      "TypeScript"
+    ],
+    "frameworks": [
+      "React.js",
+      "Express.js",
+      "Node.js",
+      "Next.js"
+    ],
+    "databases": [
+      "MySQL",
+      "PostgreSQL",
+      "Neon"
+    ],
+    "tools": [
+      "AWS",
+      "Docker",
+      "Kubernetes",
+      "Terraform",
+      "ArgoCD",
+      "Postman",
+      "Jira"
+    ]
+  },
+  "projects": [
+    {
+      "id": "1",
+      "title": "Code Pulse",
+      "description": "A SaaS platform for automated code review and technical debt tracking on registered GitHub repositories. Integrated GitHub webhooks routed through reviewdog for automated review, with a pipeline that computes technical debt metrics and surfaces them via a live dashboard and mobile notifications. Uses RabbitMQ as the message queue between microservices.",
+      "technologies": [
+        "Next.js",
+        "PostgreSQL",
+        "MongoDB",
+        "RabbitMQ",
+        "Docker",
+        "Keycloak",
+        "reviewdog"
+      ],
+      "live_url": "#!",
+      "code_repo_url": "#!",
+      "cover": "/assets/project_1.jpeg"
+    },
+    {
+      "id": "2",
+      "title": "Medi-center",
+      "description": "A full-stack multi-role healthcare marketplace connecting patients with nearby doctors, pharmacies, and AI-assisted medicine information, with Public, Registrar, and Admin roles, JWT authentication, and admin approval for healthcare providers. Includes location-based doctor/pharmacy discovery using the Haversine formula and Leaflet/OpenStreetMap, a medicine ordering system with prescription uploads and Stripe Checkout, and an AI health assistant with a rule-based medicine database.",
+      "technologies": [
+        "React",
+        "Vite",
+        "Tailwind CSS",
+        "Leaflet",
+        "Node.js",
+        "Express",
+        "PostgreSQL",
+        "Prisma",
+        "JWT",
+        "Stripe"
+      ],
+      "live_url": "#!",
+      "code_repo_url": "#!",
+      "cover": "/assets/project_2.jpeg"
+    },
+    {
+      "id": "3",
+      "title": "S4-AgriSmart",
+      "description": "A Semester 4 group project exploring cloud-native deployment on AWS, using Kubernetes (k3s) and ArgoCD for GitOps-based continuous delivery of containerized services.",
+      "technologies": [
+        "AWS",
+        "Kubernetes",
+        "ArgoCD",
+        "Docker"
+      ],
+      "live_url": "#!",
+      "code_repo_url": "#!",
+      "cover": "/assets/project_3.jpeg"
+    }
+  ],
+  "workExperience": [
+    {
+      "id": "1",
+      "company": "CSE Students' Society, University of Moratuwa",
+      "companyWebsite": "#!",
+      "role": "Director – Strategic Events Committee",
+      "startDate": "2023",
+      "endDate": "Present",
+      "technologies": [],
+      "keyResponsibilities": [
+        "Lead the Strategic Events Committee of the Computer Science and Engineering Students' Society.",
+        "Serve as Department Representative for the Department of Computer Science and Engineering.",
+        "Led refreshment handling logistics for the CSE Careers Fair 2026."
+      ]
+    },
+    {
+      "id": "2",
+      "company": "Tamil Literary Association, University of Moratuwa",
+      "companyWebsite": "#!",
+      "role": "Assistant Chair & Level Coordinator",
+      "startDate": "2023",
+      "endDate": "Present",
+      "technologies": [],
+      "keyResponsibilities": [
+        "Assistant Chair for the Association's Annual General Meeting.",
+        "Level Coordinator, organizing level-wise activities for the association.",
+        "Active member of \"Dance The Team\", the association's dance troupe.",
+        "Medalist in Cricket and Netball at Amilkaro, a competition organized by the association."
+      ]
+    },
+    {
+      "id": "3",
+      "company": "Badulla Central College",
+      "companyWebsite": "#!",
+      "role": "Junior Head Prefect & Community Volunteering",
+      "startDate": "",
+      "endDate": "2022",
+      "technologies": [],
+      "keyResponsibilities": [
+        "Held the school-level leadership role of Junior Head Prefect.",
+        "Conducted O/L mathematics seminars in rural schools through the Sasnaka Sansada Foundation.",
+        "Organized mathematics seminars in collaboration with Soyuru Sathkara.",
+        "Conducted mentoring classes for junior students."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "id": "1",
+      "institution": "University of Moratuwa",
+      "degree": "Bachelor of Computer Science and Engineering (General Stream)",
+      "description": "Current CGPA: 3.39/4.00. Made the Dean's List in Semester 1 with a GPA of 3.96.",
+      "startDate": "2023",
+      "endDate": "Present"
+    },
+    {
+      "id": "2",
+      "institution": "Badulla Central College",
+      "degree": "G.C.E. Advanced Level – Physical Science Stream",
+      "description": "Results: 3As. Z-Score: 2.6903. Island Rank: 91 (District 1st).",
+      "startDate": "",
+      "endDate": "Feb 2022"
+    }
+  ],
+  "certifications": [
+    {
+      "title": "Neural Networks and Deep Learning",
+      "institution": "Coursera",
+      "date": ""
+    },
+    {
+      "title": "Improving Deep Neural Networks",
+      "institution": "Coursera",
+      "date": ""
+    },
+    {
+      "title": "Structuring Machine Learning Projects",
+      "institution": "Coursera",
+      "date": ""
+    }
+  ],
+  "hobbies": [
+    "Dance – Member of \"Dance The Team\" (Tamil Literary Association)",
+    "Cricket & Netball",
+    "Volunteering with the Sasnaka Sansada Foundation and Soyuru Sathkara",
+    "Mentoring junior students"
+  ],
+  "testimonials": []
+}
