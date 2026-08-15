@@ -10,6 +10,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { getJSONData } from "@/lib/serverUtils";
+import { withBasePath } from "@/lib/utils";
 import Link from "next/link";
 import {
   EnvelopeClosedIcon,
@@ -35,7 +36,7 @@ export default async function Home() {
         <div className="flex flex-col lg:flex-row items-center justify-center gap-12">
           <div className="w-1/2 mx-auto lg:w-1/3">
             <Image
-              src="/assets/profile.jpeg"
+              src={withBasePath("/assets/profile.jpeg")}
               width={280}
               height={280}
               alt="Developer"
@@ -203,7 +204,7 @@ export default async function Home() {
             <Card key={project.title} className="flex flex-col lg:flex-row">
               <div className="w-full lg:w-1/3 p-2 flex items-center">
                 <Image
-                  src={project.cover}
+                  src={withBasePath(project.cover)}
                   alt="Project 1"
                   height={200}
                   width={300}
@@ -358,7 +359,7 @@ export default async function Home() {
                     height={50}
                     width={50}
                     alt="testimonial avatar"
-                    src={t.avatar}
+                    src={withBasePath(t.avatar)}
                   />
                 </Avatar>
                 <div>
