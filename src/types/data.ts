@@ -94,6 +94,7 @@ export interface Certification {
   title: string;
   institution: string;
   date: string;
+  url: string;
 }
 
 export interface Achievement {

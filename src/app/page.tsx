@@ -9,7 +9,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { getBlogPosts, getJSONData } from "@/lib/serverUtils";
+import { getJSONData } from "@/lib/serverUtils";
 import Link from "next/link";
 import {
   EnvelopeClosedIcon,
@@ -23,7 +23,6 @@ import Image from "next/image";
 
 export default async function Home() {
   const data = await getJSONData();
-  const posts = await getBlogPosts();
 
   return (
     <main>
@@ -289,16 +288,29 @@ export default async function Home() {
       >
         <h2 className="font-bold text-3xl md:text-5xl mb-12">Certifications</h2>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-          {data.certifications.map((cert) => (
-            <Card key={cert.title} className="p-4">
-              <h4 className="text-lg font-medium">{cert.title}</h4>
-              <div className="text-gray-500 dark:text-gray-400 text-sm">
-                {cert.institution}
-                {cert.institution && cert.date ? " · " : ""}
-                {cert.date}
-              </div>
-            </Card>
-          ))}
+          {data.certifications.map((cert) =>
+            cert.url ? (
+              <Link key={cert.title} href={cert.url} prefetch={false} target="_blank">
+                <Card className="p-4 transition-colors hover:border-primary">
+                  <h4 className="text-lg font-medium text-primary">{cert.title}</h4>
+                  <div className="text-gray-500 dark:text-gray-400 text-sm">
+                    {cert.institution}
+                    {cert.institution && cert.date ? " · " : ""}
+                    {cert.date}
+                  </div>
+                </Card>
+              </Link>
+            ) : (
+              <Card key={cert.title} className="p-4">
+                <h4 className="text-lg font-medium">{cert.title}</h4>
+                <div className="text-gray-500 dark:text-gray-400 text-sm">
+                  {cert.institution}
+                  {cert.institution && cert.date ? " · " : ""}
+                  {cert.date}
+                </div>
+              </Card>
+            )
+          )}
         </div>
       </section>
       )}
@@ -362,27 +374,6 @@ export default async function Home() {
       </section>
       )}
 
-      {/* Blogs Section */}
-      <section
-        id="blogs"
-        className="container max-w-5xl mx-auto py-12 md:py-16 lg:py-20"
-      >
-        <h2 className="font-bold text-3xl md:text-5xl mb-12">Blogs</h2>
-
-        <div className="flex flex-col space-y-8">
-          {posts.map((post) => (
-            <Link key={post.slug} href={`/blogs/${post.slug}`}>
-              <h3 className="text-xl md:text-3xl font-semibold">
-                {post.title}
-              </h3>
-              <p className="md:text-lg font-light">{post.description}</p>
-              <p className="text-sm font-medium text-gray-500 mt-2">
-                Published at: {post.publishDate}
-              </p>
-            </Link>
-          ))}
-        </div>
-      </section>
     </main>
   );
 }

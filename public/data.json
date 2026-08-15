@@ -25,10 +25,6 @@
         {
           "label": "Achievements",
           "path": "#achievements"
-        },
-        {
-          "label": "Blogs",
-          "path": "#blogs"
         }
       ]
     },
@@ -54,8 +50,8 @@
   "contactInfo": {
     "email": "janug0227@gmail.com",
     "phone": "0763050322",
-    "linkedin": "#!",
-    "github": "#!",
+    "linkedin": "https://www.linkedin.com/in/gnanasekaran-janushikha",
+    "github": "https://github.com/Janushikha",
     "twitter": "#!",
     "website": "#!"
   },
@@ -285,22 +281,26 @@
     {
       "title": "Neural Networks and Deep Learning",
       "institution": "Coursera",
-      "date": "Jan 2026"
+      "date": "Jan 2026",
+      "url": "https://coursera.org/share/60df21eb9b7adcb33258ca5971a675e7"
     },
     {
       "title": "Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization",
       "institution": "Coursera",
-      "date": "June 2026"
+      "date": "June 2026",
+      "url": "https://coursera.org/share/24f0d82347b2511914627444aac4430f"
     },
     {
       "title": "Structuring Machine Learning Projects",
       "institution": "Coursera",
-      "date": "July 2026"
+      "date": "July 2026",
+      "url": "https://coursera.org/share/c91fc6e5d089e8d73e4c9b374fe55d82"
     },
     {
       "title": "AutoCAD",
       "institution": "",
-      "date": "2023"
+      "date": "2023",
+      "url": ""
     }
   ],
   "achievements": [
