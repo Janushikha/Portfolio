@@ -7,12 +7,24 @@
           "path": "#experience"
         },
         {
+          "label": "Skills",
+          "path": "#skills"
+        },
+        {
           "label": "Projects",
           "path": "#projects"
         },
         {
           "label": "Education",
           "path": "#education"
+        },
+        {
+          "label": "Certifications",
+          "path": "#certifications"
+        },
+        {
+          "label": "Achievements",
+          "path": "#achievements"
         },
         {
           "label": "Blogs",
@@ -24,8 +36,11 @@
       "sections": {
         "banner": true,
         "experience": true,
+        "skills": true,
         "project": true,
         "education": true,
+        "certifications": true,
+        "achievements": true,
         "testimonial": false
       }
     }
@@ -34,7 +49,7 @@
     "name": "Gnanasekaran Janushikha",
     "title": "Full-Stack Developer | Cloud & AI Enthusiast",
     "location": "Badulla, Sri Lanka",
-    "bio": "Third-year Computer Science and Engineering undergraduate at the University of Moratuwa with a strong interest in generative AI, cloud technologies, and full-stack development. Comfortable working across the stack, from cloud infrastructure to interactive front ends, and quick to pick up new tools and frameworks. Looking for an internship where I can apply my skills to real-world, impactful software projects while continuing to grow as an engineer."
+    "bio": "Third-year Computer Science and Engineering undergraduate at the University of Moratuwa with a strong interest in software engineering, full-stack development, and AI. A quick learner who enjoys solving real-world problems, taking on new challenges, and working in collaborative environments. Seeking an internship opportunity to apply my skills, contribute to impactful software projects, and grow as an engineer."
   },
   "contactInfo": {
     "email": "janug0227@gmail.com",
@@ -60,40 +75,62 @@
     "databases": [
       "MySQL",
       "PostgreSQL",
-      "Neon"
+      "Neon",
+      "Supabase",
+      "MongoDB"
     ],
-    "tools": [
+    "cloud": [
       "AWS",
       "Docker",
       "Kubernetes",
       "Terraform",
-      "ArgoCD",
+      "ArgoCD"
+    ],
+    "tools": [
       "Postman",
-      "Jira"
+      "Jira",
+      "ESLint",
+      "Gemini API"
     ]
   },
   "projects": [
     {
       "id": "1",
       "title": "Code Pulse",
-      "description": "A SaaS platform for automated code review and technical debt tracking on registered GitHub repositories. Integrated GitHub webhooks routed through reviewdog for automated review, with a pipeline that computes technical debt metrics and surfaces them via a live dashboard and mobile notifications. Uses RabbitMQ as the message queue between microservices.",
+      "description": "An ongoing SaaS platform for automated code review and technical debt tracking, integrating GitHub webhooks, reviewdog, and RabbitMQ to analyze pull requests, store review findings in MongoDB, and assess technical debt using the SQALE method. Includes a business-oriented dashboard that translates code-quality metrics into simplified project health indicators for non-technical stakeholders, with Keycloak-based authentication, role-based access control, and Docker containerization.",
       "technologies": [
         "Next.js",
         "PostgreSQL",
         "MongoDB",
         "RabbitMQ",
         "Docker",
+        "GitHub",
         "Keycloak",
         "reviewdog"
       ],
-      "live_url": "#!",
-      "code_repo_url": "#!",
+      "live_url": "",
+      "code_repo_url": "https://github.com/SynGo-D",
+      "hasLiveDemo": false,
       "cover": "/assets/project_1.jpeg"
     },
     {
       "id": "2",
+      "title": "Console RPG Arena",
+      "description": "An ongoing Java console RPG demonstrating OOP fundamentals (inheritance, polymorphism, interfaces) and design patterns (Factory, Strategy, Observer, Singleton) through a custom character and combat system, with ANSI escape sequences for CLI formatting.",
+      "technologies": [
+        "Java",
+        "JDK",
+        "ANSI Escape Sequences"
+      ],
+      "live_url": "",
+      "code_repo_url": "https://github.com/Janushikha/Console-RPG-Arena-",
+      "hasLiveDemo": false,
+      "cover": "/assets/console-rpg-arena.svg"
+    },
+    {
+      "id": "3",
       "title": "Medi-center",
-      "description": "A full-stack multi-role healthcare marketplace connecting patients with nearby doctors, pharmacies, and AI-assisted medicine information, with Public, Registrar, and Admin roles, JWT authentication, and admin approval for healthcare providers. Includes location-based doctor/pharmacy discovery using the Haversine formula and Leaflet/OpenStreetMap, a medicine ordering system with prescription uploads and Stripe Checkout, and an AI health assistant with a rule-based medicine database.",
+      "description": "A full-stack healthcare marketplace with role-based access (Public/Registrar/Admin), JWT authentication, and admin-approved provider onboarding. Features location-based doctor/pharmacy search with Leaflet maps, specialty filters, and a review/rating system, plus a prescription-to-delivery ordering flow with file upload, pharmacist pricing, Stripe Checkout, and order status tracking. Also includes a rule-based medicine info assistant structured for future Claude API integration.",
       "technologies": [
         "React",
         "Vite",
@@ -104,25 +141,44 @@
         "PostgreSQL",
         "Prisma",
         "JWT",
-        "Stripe"
+        "Stripe",
+        "Multer"
       ],
-      "live_url": "#!",
-      "code_repo_url": "#!",
-      "cover": "/assets/project_2.jpeg"
+      "live_url": "",
+      "code_repo_url": "https://github.com/Janushikha/Medi-center",
+      "hasLiveDemo": false,
+      "cover": "/assets/Medicenter.png"
     },
     {
-      "id": "3",
-      "title": "S4-AgriSmart",
-      "description": "A Semester 4 group project exploring cloud-native deployment on AWS, using Kubernetes (k3s) and ArgoCD for GitOps-based continuous delivery of containerized services.",
+      "id": "4",
+      "title": "AgriSenseNet – Smart Agriculture Platform",
+      "description": "A group project building a precision agriculture platform using IoT sensors, real-time data pipelines, and ML models to automate irrigation decisions and crop monitoring for mixed-vegetable farming. Sensor data (soil moisture, temperature, humidity, pressure, solar radiation) is collected via ESP32 devices, streamed through Apache Kafka, processed with ML models, and displayed on a web/mobile dashboard. My contribution: modular Terraform scripts automating the AWS infrastructure, including a secure VPC with public/private subnets, private EC2 instances for the Kubernetes control plane and workers, a Bastion Host for secure SSH access, and a Network Load Balancer for external service requests.",
       "technologies": [
-        "AWS",
         "Kubernetes",
         "ArgoCD",
+        "Terraform",
+        "AWS",
         "Docker"
       ],
-      "live_url": "#!",
-      "code_repo_url": "#!",
-      "cover": "/assets/project_3.jpeg"
+      "live_url": "",
+      "code_repo_url": "https://github.com/orgs/AgriSenseNet/repositories",
+      "hasLiveDemo": false,
+      "cover": "/assets/AgriSenseNet.png"
+    },
+    {
+      "id": "5",
+      "title": "ResQLink",
+      "description": "A group project building a centralized real-time platform for disaster, missing-person, animal-rescue, and camp-request reporting, with admin-verified camp registrations and AI-driven incident prioritization and resource recommendations. Enables multilingual SMS reporting with offline support for reliable incident submission in low-connectivity situations, and automates call transcription and incident report generation to reduce manual reporting overhead. My contribution: an AI-powered call recording transcription feature and the automated field-intake pipeline.",
+      "technologies": [
+        "Supabase",
+        "Google Gemini API",
+        "MacroDroid",
+        "ESLint"
+      ],
+      "live_url": "https://sldisasterportal.vercel.app/",
+      "code_repo_url": "https://github.com/AHMEDzayn-ux/Hacklite-Disaster-management",
+      "hasLiveDemo": true,
+      "cover": "/assets/ResQLink.jpeg"
     }
   ],
   "workExperience": [
@@ -131,43 +187,71 @@
       "company": "CSE Students' Society, University of Moratuwa",
       "companyWebsite": "#!",
       "role": "Director – Strategic Events Committee",
-      "startDate": "2023",
-      "endDate": "Present",
+      "startDate": "2026",
+      "endDate": "2027",
       "technologies": [],
       "keyResponsibilities": [
-        "Lead the Strategic Events Committee of the Computer Science and Engineering Students' Society.",
-        "Serve as Department Representative for the Department of Computer Science and Engineering.",
-        "Led refreshment handling logistics for the CSE Careers Fair 2026."
+        "Organized sessions and workshops to encourage open-source contributions among CSE students, fostering collaboration, practical learning, and engagement with the open-source community."
       ]
     },
     {
       "id": "2",
-      "company": "Tamil Literary Association, University of Moratuwa",
+      "company": "Department of Computer Science and Engineering, University of Moratuwa",
       "companyWebsite": "#!",
-      "role": "Assistant Chair & Level Coordinator",
-      "startDate": "2023",
-      "endDate": "Present",
+      "role": "Department Representative",
+      "startDate": "2024",
+      "endDate": "2025",
       "technologies": [],
       "keyResponsibilities": [
-        "Assistant Chair for the Association's Annual General Meeting.",
-        "Level Coordinator, organizing level-wise activities for the association.",
-        "Active member of \"Dance The Team\", the association's dance troupe.",
-        "Medalist in Cricket and Netball at Amilkaro, a competition organized by the association."
+        "Represented the CSE batch, communicating students’ concerns, feedback, and suggestions to the department and supporting effective coordination between students and academic staff."
       ]
     },
     {
       "id": "3",
-      "company": "Badulla Central College",
+      "company": "Tamil Literary Association",
       "companyWebsite": "#!",
-      "role": "Junior Head Prefect & Community Volunteering",
+      "role": "Assistant Chair – AGM",
       "startDate": "",
-      "endDate": "2022",
+      "endDate": "23 July 2026",
       "technologies": [],
       "keyResponsibilities": [
-        "Held the school-level leadership role of Junior Head Prefect.",
-        "Conducted O/L mathematics seminars in rural schools through the Sasnaka Sansada Foundation.",
-        "Organized mathematics seminars in collaboration with Soyuru Sathkara.",
-        "Conducted mentoring classes for junior students."
+        "Assisted in the overall supervision of the AGM, delivered the welcome speech, and served as the election officer"
+      ]
+    },
+    {
+      "id": "4",
+      "company": "Tamil Literary Association",
+      "companyWebsite": "#!",
+      "role": "Level Coordinator",
+      "startDate": "2026",
+      "endDate": "2027",
+      "technologies": [],
+      "keyResponsibilities": [
+        "Coordinated TLA members within the batch(department), facilitating communication, organizing activities, and supporting the association’s events and initiatives."
+      ]
+    },
+    {
+      "id": "5",
+      "company": "CSE Careers Fair 2026",
+      "companyWebsite": "#!",
+      "role": "Lead – Refreshment Handling",
+      "startDate": "",
+      "endDate": "22 Jan 2026",
+      "technologies": [],
+      "keyResponsibilities": [
+        "Managed the refreshment setup and distribution during the careers fair."
+      ]
+    },
+    {
+      "id": "6",
+      "company": "Badulla Central College",
+      "companyWebsite": "#!",
+      "role": "Junior Head Prefect – School Level",
+      "startDate": "2018",
+      "endDate": "2019",
+      "technologies": [],
+      "keyResponsibilities": [
+        "Maintained school discipline and cleanliness by ensuring prefects and students completed their assigned duties before morning prayers, and maintained order and silence of the whole school during teachers’ meetings and school events."
       ]
     }
   ],
@@ -177,40 +261,71 @@
       "institution": "University of Moratuwa",
       "degree": "Bachelor of Computer Science and Engineering (General Stream)",
       "description": "Current CGPA: 3.39/4.00. Made the Dean's List in Semester 1 with a GPA of 3.96.",
-      "startDate": "2023",
+      "startDate": "2024",
       "endDate": "Present"
     },
     {
       "id": "2",
       "institution": "Badulla Central College",
       "degree": "G.C.E. Advanced Level – Physical Science Stream",
-      "description": "Results: 3As. Z-Score: 2.6903. Island Rank: 91 (District 1st).",
+      "description": "Results: 3As. District Rank: 1st. Island Rank: 91. Z-Score: 2.6903.",
       "startDate": "",
-      "endDate": "Feb 2022"
+      "endDate": "Jan 2023"
+    },
+    {
+      "id": "3",
+      "institution": "B/Uva Science College",
+      "degree": "G.C.E. Ordinary Level",
+      "description": "Results: 9As, including English Literature, Second Language Sinhala, and Information Technology.",
+      "startDate": "2014",
+      "endDate": "2019"
     }
   ],
   "certifications": [
     {
       "title": "Neural Networks and Deep Learning",
       "institution": "Coursera",
-      "date": ""
+      "date": "Jan 2026"
     },
     {
-      "title": "Improving Deep Neural Networks",
+      "title": "Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization",
       "institution": "Coursera",
-      "date": ""
+      "date": "June 2026"
     },
     {
       "title": "Structuring Machine Learning Projects",
       "institution": "Coursera",
-      "date": ""
+      "date": "July 2026"
+    },
+    {
+      "title": "AutoCAD",
+      "institution": "",
+      "date": "2023"
+    }
+  ],
+  "achievements": [
+    {
+      "title": "Finalist – CodeRally 6.0",
+      "description": "IEEE Computer Society 24-Hour Hackathon (IIT)."
+    },
+    {
+      "title": "Gold Medalist – Sri Lankan Physics Olympiad Competition",
+      "description": "2022."
+    },
+    {
+      "title": "Dean's List – Semester 1",
+      "description": "GPA: 3.96."
+    },
+    {
+      "title": "Semifinalist – Island-Wide Netball Competition",
+      "description": "Conducted by Milo, as part of the college netball team."
     }
   ],
   "hobbies": [
-    "Dance – Member of \"Dance The Team\" (Tamil Literary Association)",
-    "Cricket & Netball",
-    "Volunteering with the Sasnaka Sansada Foundation and Soyuru Sathkara",
-    "Mentoring junior students"
+    "Languages: English, Tamil, and Sinhala (all fluent)",
+    "Interests: Netball, Cricket, organizing events, and dance",
+    "Conducted O/L mathematics seminars in rural schools through the Sasnaka Sansada Foundation",
+    "Organized mathematics seminars in collaboration with Soyuru Sathkara"
   ],
   "testimonials": []
 }

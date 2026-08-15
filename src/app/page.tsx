@@ -36,7 +36,7 @@ export default async function Home() {
         <div className="flex flex-col lg:flex-row items-center justify-center gap-12">
           <div className="w-1/2 mx-auto lg:w-1/3">
             <Image
-              src="/assets/profile.jpg"
+              src="/assets/profile.jpeg"
               width={280}
               height={280}
               alt="Developer"
@@ -130,6 +130,68 @@ export default async function Home() {
       </section>
       )}
 
+      {/* Skills Section */}
+      {data.visual.home.sections.skills && (
+      <section
+        id="skills"
+        className="container max-w-5xl mx-auto py-12 md:py-16 lg:py-20"
+      >
+        <h2 className="font-bold text-3xl md:text-5xl mb-12">Skills</h2>
+        <div className="grid gap-8 sm:grid-cols-2">
+          <div>
+            <h6 className="font-medium mb-3">Programming Languages</h6>
+            <div className="flex flex-wrap gap-2">
+              {data.skills.languages.map((skill) => (
+                <Badge key={skill} variant="secondary">
+                  {skill}
+                </Badge>
+              ))}
+            </div>
+          </div>
+          <div>
+            <h6 className="font-medium mb-3">Web Technologies</h6>
+            <div className="flex flex-wrap gap-2">
+              {data.skills.frameworks.map((skill) => (
+                <Badge key={skill} variant="secondary">
+                  {skill}
+                </Badge>
+              ))}
+            </div>
+          </div>
+          <div>
+            <h6 className="font-medium mb-3">Database Systems</h6>
+            <div className="flex flex-wrap gap-2">
+              {data.skills.databases.map((skill) => (
+                <Badge key={skill} variant="secondary">
+                  {skill}
+                </Badge>
+              ))}
+            </div>
+          </div>
+          <div>
+            <h6 className="font-medium mb-3">Cloud & DevOps</h6>
+            <div className="flex flex-wrap gap-2">
+              {data.skills.cloud.map((skill) => (
+                <Badge key={skill} variant="secondary">
+                  {skill}
+                </Badge>
+              ))}
+            </div>
+          </div>
+          <div>
+            <h6 className="font-medium mb-3">Tools</h6>
+            <div className="flex flex-wrap gap-2">
+              {data.skills.tools.map((skill) => (
+                <Badge key={skill} variant="secondary">
+                  {skill}
+                </Badge>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+      )}
+
       {/* Projects Section */}
       {data.visual.home.sections.project && (
       <section
@@ -166,15 +228,17 @@ export default async function Home() {
                 </CardContent>
                 <CardFooter>
                   <div className="flex space-x-3">
-                    <Link
-                      href={project.live_url}
-                      prefetch={false}
-                    >
-                      <Button size="sm">
-                        <GlobeIcon className="h-3 w-3 mr-2" />
-                        Live Demo
-                      </Button>
-                    </Link>
+                    {project.hasLiveDemo && (
+                      <Link
+                        href={project.live_url}
+                        prefetch={false}
+                      >
+                        <Button size="sm">
+                          <GlobeIcon className="h-3 w-3 mr-2" />
+                          Live Demo
+                        </Button>
+                      </Link>
+                    )}
                     <Link
                       href={project.code_repo_url}
                       prefetch={false}
@@ -214,6 +278,51 @@ export default async function Home() {
             </div>
           ))}
         </div>
+      </section>
+      )}
+
+      {/* Certifications Section */}
+      {data.visual.home.sections.certifications && (
+      <section
+        id="certifications"
+        className="container max-w-5xl mx-auto py-12 md:py-16 lg:py-20"
+      >
+        <h2 className="font-bold text-3xl md:text-5xl mb-12">Certifications</h2>
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          {data.certifications.map((cert) => (
+            <Card key={cert.title} className="p-4">
+              <h4 className="text-lg font-medium">{cert.title}</h4>
+              <div className="text-gray-500 dark:text-gray-400 text-sm">
+                {cert.institution}
+                {cert.institution && cert.date ? " · " : ""}
+                {cert.date}
+              </div>
+            </Card>
+          ))}
+        </div>
+      </section>
+      )}
+
+      {/* Achievements Section */}
+      {data.visual.home.sections.achievements && (
+      <section
+        id="achievements"
+        className="container max-w-5xl mx-auto py-12 md:py-16 lg:py-20"
+      >
+        <h2 className="font-bold text-3xl md:text-5xl mb-12">Achievements</h2>
+        <ul className="list-disc pl-6 space-y-2">
+          {data.achievements.map((ach) => (
+            <li key={ach.title}>
+              <span className="font-medium">{ach.title}</span>
+              {ach.description && (
+                <span className="text-gray-500 dark:text-gray-400">
+                  {" "}
+                  — {ach.description}
+                </span>
+              )}
+            </li>
+          ))}
+        </ul>
       </section>
       )}
 

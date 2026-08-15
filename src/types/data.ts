@@ -10,8 +10,11 @@ export interface Navbar {
 export interface HomeSections {
   banner: boolean;
   experience: boolean;
+  skills: boolean;
   project: boolean;
   education: boolean;
+  certifications: boolean;
+  achievements: boolean;
   testimonial: boolean;
 }
 
@@ -44,6 +47,7 @@ export interface Skills {
   languages: string[];
   frameworks: string[];
   databases: string[];
+  cloud: string[];
   tools: string[];
 }
 
@@ -53,6 +57,7 @@ export interface Project {
   technologies: string[];
   live_url: string;
   code_repo_url: string;
+  hasLiveDemo: boolean;
   cover: string;
 }
 
@@ -91,6 +96,11 @@ export interface Certification {
   date: string;
 }
 
+export interface Achievement {
+  title: string;
+  description: string;
+}
+
 export interface Data {
   personalInfo: PersonalInfo;
   contactInfo: ContactInfo;
@@ -99,6 +109,7 @@ export interface Data {
   workExperience: WorkExperience[];
   education: Education[];
   certifications: Certification[];
+  achievements: Achievement[];
   hobbies: string[];
   testimonials: Testimonial[];
   visual: Visual;
